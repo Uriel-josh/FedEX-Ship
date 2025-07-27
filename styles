@@ -1,0 +1,220 @@
+/* Main Styles for FedEx Shipping Website */
+
+/* Variables */
+:root {
+    --fedex-purple: #5D149C; /* Slightly lighter purple */
+    --fedex-orange: #FF7700; /* Slightly lighter orange */
+    --fedex-blue: #0099CC;
+    --fedex-green: #00CC00;
+    --fedex-red: #FF0000;
+    --light-gray: #f8f9fa;
+    --dark-gray: #343a40;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+a {
+    color: var(--fedex-purple);
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: var(--fedex-orange);
+    text-decoration: none;
+}
+
+/* Navigation */
+.navbar {
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.bg-purple {
+    background-color: var(--fedex-purple);
+}
+
+.navbar-brand img {
+    margin-right: 10px;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    color: #fff;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(77, 20, 140, 0.9), rgba(77, 20, 140, 0.7)), url('../images/hero-bg.svg');
+    background-size: cover;
+    background-position: center;
+    padding: 6rem 0;
+    color: white;
+}
+
+.hero-section h1 {
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.btn-primary {
+    background-color: var(--fedex-orange);
+    border-color: var(--fedex-orange);
+    font-weight: 500;
+}
+
+.btn-primary:hover {
+    background-color: #e55c00;
+    border-color: #e55c00;
+}
+
+.btn-outline-light:hover {
+    color: var(--fedex-purple);
+}
+
+/* Tracking Section */
+#tracking {
+    background-color: var(--light-gray);
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+.shadow {
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Services Section */
+.service-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    border-top: 4px solid var(--fedex-orange);
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.service-icon {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, var(--fedex-purple), var(--fedex-blue));
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.service-icon i {
+    font-size: 2rem;
+}
+
+/* Locations Section */
+.location-map {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Section */
+.contact-icon {
+    width: 50px;
+    height: 50px;
+    background-color: var(--fedex-purple);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(to right, var(--dark-gray), #1a1a2e);
+    border-top: 4px solid var(--fedex-orange);
+}
+
+footer h5 {
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    color: var(--fedex-orange);
+}
+
+footer a {
+    color: rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease;
+    padding: 3px 0;
+    display: inline-block;
+}
+
+footer a:hover {
+    color: white;
+    text-decoration: none;
+    transform: translateX(5px);
+}
+
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: var(--fedex-orange);
+    transform: translateY(-3px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 4rem 0;
+    }
+    
+    .card-body {
+        padding: 1.5rem;
+    }
+    
+    .service-card {
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fadeIn {
+    animation: fadeIn 1s ease-out;
+}
